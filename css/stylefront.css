@@ -51,5 +51,10 @@ i {
     border: 1px solid black;
 }
 
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 40px 7px 7px 0; /* Отступы вокруг картинки */
+
+}
 
 

@@ -40,8 +40,10 @@ function getFiveLastPosts()
     $queryResult = $link->query($query);
 
     while($row = mysqli_fetch_array($queryResult)) {
-//                        var_dump($row);
-//                        die ("1");
+        if(isset($row['img'])&&!empty($row['img'])){
+            echo '<p class="leftimg"><img src="'.$row['img'].'"></p>';
+        }else{
+            echo "";}
         echo "<H3>".$row['title']."</H3>";
         echo $row['text'] ."<br>";
         echo "<i>create:".$row['create_at']."</i>";
@@ -89,9 +91,11 @@ function getPosts()
     $queryResult = $link->query($query);
 
     while($row = mysqli_fetch_array($queryResult)) {
+        if(isset($row['img'])&&!empty($row['img'])){
+            echo '<p class="leftimg"><img src="'.$row['img'].'"></p>';
+        }else{
+            echo "";}
         echo "<H3>".$row['title']."</H3>";
-        echo "<p><img src='{$row['img']}'></p>";
-        var_dump("{$row['img']}");
         echo $row['text']."<br>";
         echo "<br>";
     }

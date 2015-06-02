@@ -9,7 +9,7 @@
         <nav class="navbar navbar-default" style="align-content: center; background: #49F72B;">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="http://localhost/project/index.php">Main</a>
+                    <a class="navbar-brand" href="index.php">Main</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <?php
