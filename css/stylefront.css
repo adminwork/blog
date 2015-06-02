@@ -1,0 +1,55 @@
+﻿body {
+    font: 14pt Arial, Helvetica, sans-serif;
+    text-align: center; /* вырвнивание по центру */
+    background-color: #00CC00;
+}
+
+.navbar-brand {
+    padding-left: 20px;
+
+}
+
+.container {       /* весь центральный контент с хеадером */
+    width: 1180px;
+    margin: 0 auto;
+    background: #006600;
+    color: black;
+}
+
+A {
+    color: #EDCB21; /* Цвет ссылок */
+}
+
+a:hover {
+    color: #CAED21; /* Цвет ссылки при наведении на нее курсора мыши */
+    text-decoration: underline; /* Добавляем подчеркивание */
+}
+
+A:visit,A:visited {
+    color: #cecece; /* Цвет посещенных ссылок */
+}
+
+A:active {
+    color: #ffff00; /* Цвет активных ссылок */
+}
+
+i {
+    font-family: Arial,sans-serif;
+    font-size:14px;
+}
+
+.navbar-default {
+    border-bottom-color: black;
+    border-left-color: black;
+    border-right-color: black;
+    border-top-color: black;
+}
+
+.panel-footer {
+    background: #49F72B;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+
+

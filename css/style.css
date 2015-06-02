@@ -1,0 +1,18 @@
+﻿.nav li ul {
+    display: none;	/*срываем вложенные пункты*/
+}
+
+.nav li:hover {
+    position: relative;
+    background: #36C21E ;
+}
+
+.nav li:hover > ul {
+    border: 1px solid black;
+    display: block;
+    position: absolute;
+    top: 34px; /*первый уровень меню раскрывается вниз*/
+    left: 0;
+}
+
+
