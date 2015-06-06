@@ -4,19 +4,6 @@ function createMenu($arrayMenu) {
     if (!is_array($arrayMenu) || !count($arrayMenu)) {
         return;
     }
-    echo '<ul class="nav navbar-nav">';
-    foreach ($arrayMenu as $key => $value) {
-        echo '<li style="width:200px;">'."<a href='category.php?id={$key}'>";
-        echo $value;
-        echo '</a></li>';
-    }
-    echo '</ul>';
-}
-
-function createMenuF($arrayMenu) {
-    if (!is_array($arrayMenu) || !count($arrayMenu)) {
-        return;
-    }
     foreach ($arrayMenu as $key => $value) {
         echo "<a href='category.php?id={$key}' class='btn btn-default'>";
         echo $value;

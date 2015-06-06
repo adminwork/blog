@@ -12,7 +12,7 @@
             <div class="btn-group-vertical" id="sidebar">
                 <?php
                 $categorriesArray = getAllCategories();
-                createMenuF($categorriesArray);
+                createMenu($categorriesArray);
                 ?>
             </div>
 <!-------------------------------------------------MENU END------------------------------------------------------------>
