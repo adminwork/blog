@@ -13,6 +13,17 @@ function createMenu($arrayMenu) {
     echo '</ul>';
 }
 
+function createMenuF($arrayMenu) {
+    if (!is_array($arrayMenu) || !count($arrayMenu)) {
+        return;
+    }
+    foreach ($arrayMenu as $key => $value) {
+        echo "<a href='category.php?id={$key}' class='btn btn-default'>";
+        echo $value;
+        echo '</a>';
+    }
+    echo '</ul>';
+}
 
 function getAllCategories() {
     $link = mysqli_connect("localhost","root","","blog") or die("Error " . mysqli_error($link));

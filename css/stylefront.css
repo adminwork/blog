@@ -4,6 +4,14 @@
     background-color: #00CC00;
 }
 
+.header {
+    font-size: 2.2em; /* Размер текста */
+    text-align: center; /* Выравнивание по центру */
+    padding: 5px; /* Отступы вокруг текста */
+    background: #49F72B; /* Цвет фона шапки */
+    color: black; /* Цвет текста */
+}
+
 .navbar-brand {
     padding-left: 20px;
 
@@ -14,6 +22,11 @@
     margin: 0 auto;
     background: #006600;
     color: black;
+}
+
+.content {
+    margin-left: 170px; /* Отступ слева */
+    padding: 10px; /* Поля вокруг текста */
 }
 
 A {
@@ -39,10 +52,7 @@ i {
 }
 
 .navbar-default {
-    border-bottom-color: black;
-    border-left-color: black;
-    border-right-color: black;
-    border-top-color: black;
+    border-color: black;
 }
 
 .panel-footer {
@@ -57,4 +67,9 @@ i {
 
 }
 
-
+#sidebar {
+    margin-top: 10px;
+    width: 160px; /* Ширина слоя */
+    padding: 0 10px; /* Отступы вокруг текста */
+    float: left; /* Обтекание по правому краю */
+}

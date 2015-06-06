@@ -6,19 +6,15 @@
 <body>
     <div class="container">
     <!---------------------------------------------------MENU-------------------------------------------------------------->
-        <nav class="navbar navbar-default" style="align-content: center; background: #49F72B;">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">Main</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <?php
-                    $categorriesArray = getAllCategories();
-                    createMenu($categorriesArray);
-                    ?>
-                </div>
-            </div>
-        </nav>
+        <div style="float: right" ><a href="login.php">Log in</a></div>
+        <div style="float: right" ><a href="registracia.php">Registrahion</a></div>
+        <div class="header">Blog of football</div>
+        <div class="btn-group-vertical" id="sidebar">
+            <?php
+            $categorriesArray = getAllCategories();
+            createMenuF($categorriesArray);
+            ?>
+        </div>
     <!-------------------------------------------------MENU END------------------------------------------------------------>
     <!-------------------------------------------------CONTENT------------------------------------------------------------->
         <div>
