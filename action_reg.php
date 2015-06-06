@@ -37,7 +37,7 @@ if($success) {
     if ($queryResult2 == 'TRUE') {
         echo "You have successfully logged in! Now you can log in to the site. <a href='index.php'>Main page</a>";
     } else {
-        echo "Error! You are not registred.";
+        echo "Error! You are not registred.<a href='index.php'>Main page</a>";
     }
 }
 echo ($error != "") ? $error : "";

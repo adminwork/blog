@@ -29,7 +29,7 @@ $myrow = mysqli_fetch_array($queryResult);
 
 if (empty($myrow['pass']))
 {
-    exit ("Sorry, you entered an incorrect login or password .");
+    exit ("Sorry, you entered an incorrect login or password. <a href='index.php'>Main page</a> ");
 }
 else {
     //если существует, то сверяем пароли
@@ -39,6 +39,6 @@ else {
         echo "You have successfully logged in ! <a href='index.php'>Main page</a>";
     }
     else {
-        exit ("Sorry, you entered an incorrect login or password .");
+        exit ("Sorry, you entered an incorrect login or password .<a href='index.php'>Main page</a>");
     }
 }
