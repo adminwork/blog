@@ -21,6 +21,8 @@ if($pass != $pass_confirm) {
 
 $pass = md5(md5($pass));
 
+$create_at = date("m-d-y H:i:s");
+
 if($success) {
 
     $result = "SELECT id FROM users WHERE username='$username'";
@@ -31,7 +33,7 @@ if($success) {
         exit ("Sorry, username you entered is already registered . Please enter a different username .");
     }
 // если такого нет, то сохраняем данные
-    $result2 = 'INSERT INTO users(id, username, pass, email, create_at, update_at, first_name, last_name, avatar) VALUES ("", "' . $username . '", "' . $pass . '", "' . $email . '", "", "", "' . $first_name . '", "' . $last_name . '", "")';
+    $result2 = 'INSERT INTO users(id, username, pass, email, create_at, update_at, first_name, last_name, avatar) VALUES ("", "' . $username . '", "' . $pass . '", "' . $email . '", "'.$create_at.'", "", "' . $first_name . '", "' . $last_name . '", "")';
     $queryResult2 = $conn->query($result2);
 
     if ($queryResult2 == 'TRUE') {

@@ -9,6 +9,8 @@ $username = $_POST['username'];
 $pass = $_POST['pass'];
 $email = $_POST['email'];
 
+$update_at = date("m-d-y H:i:s");
+
 $result = "SELECT id FROM users WHERE username ='{$username}' LIMIT 1";
 $queryResult = $conn->query($result);
 
@@ -28,7 +30,7 @@ if (mysqli_num_rows($queryResult)==1)
 
     $pass = md5(md5($string));
 
-    $query = "UPDATE users SET pass ='{$pass}' WHERE username ='{$username}' ";
+    $query = "UPDATE users SET pass ='{$pass}' ,update_at ='{$update_at }'  WHERE username ='{$username}' ";
     $queryResult = $conn->query($query);
 
 
