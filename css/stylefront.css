@@ -19,6 +19,7 @@
 
 .container {       /* весь центральный контент с хеадером */
     width: 1180px;
+    /*height: 100%;*/
     margin: 0 auto;
     background: #006600;
     color: black;
@@ -73,3 +74,10 @@ i {
     padding: 0 10px; /* Отступы вокруг текста */
     float: left; /* Обтекание по правому краю */
 }
+
+/*.panel-footer {*/
+    /*width: 1150px;*/
+    /*height:100px;*/
+    /*position:absolute;*/
+    /*bottom:0;*/
+/*}*/
