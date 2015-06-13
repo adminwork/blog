@@ -5,11 +5,12 @@
 }
 
 .header {
-    font-size: 2.2em; /* Размер текста */
+    /*font-size: 2.2em; *//* Размер текста */
     text-align: center; /* Выравнивание по центру */
-    padding: 5px; /* Отступы вокруг текста */
-    background: #49F72B; /* Цвет фона шапки */
-    color: black; /* Цвет текста */
+    padding-left: -15px; /* Отступы вокруг текста */
+    margin: 0;
+    /*background: #49F72B; *//* Цвет фона шапки */
+    /*color: black; *//* Цвет текста */
 }
 
 .navbar-brand {
@@ -23,6 +24,8 @@
     margin: 0 auto;
     background: #006600;
     color: black;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .content {

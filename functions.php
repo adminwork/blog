@@ -1,6 +1,6 @@
 <?php
 
-class funcMenuPost {
+class FuncMenuPost {
 
     private $db_host = 'localhost';
     private $db_username = 'root';
