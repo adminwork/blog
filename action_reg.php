@@ -1,9 +1,9 @@
 <?php
 
-include ("bd.php");
+include ("class/dbconnect.php");
 
 
-class Registration extends ConnectDB
+class Registration extends DbConnect
 {
 
     private  $first_name;
@@ -37,21 +37,21 @@ class Registration extends ConnectDB
         }
 
         $this -> pass = md5(md5($this -> pass));
-
-        $create_at = date("m-d-y H:i:s");
+        $create_at = date("y-m-d H:i:s");
 
         if($success) {
 
             $result = "SELECT id FROM users WHERE username='{$this -> username}'";
-            $queryResult = $this -> conn->query($result);
-
+            $queryResult = $this->runQuery($result);
             $myrow = mysqli_fetch_array($queryResult);
+
             if (!empty($myrow['id'])) {
                 exit ("Sorry, username you entered is already registered . Please enter a different username .");
             }
             // если такого нет, то сохраняем данные
-            $this -> result2 = 'INSERT INTO users(id, username, pass, email, create_at, update_at, first_name, last_name, avatar) VALUES ("", "' . $this -> username . '", "' . $this ->pass . '", "' . $this -> email . '", "'.$create_at.'", "", "' . $this ->first_name . '", "' . $this ->last_name . '", "")';
-            $queryResult2 = $this -> conn->query($this -> result2);
+            $result2 = 'INSERT INTO users(id, username, pass, email, create_at, update_at, first_name, last_name, avatar) VALUES ("", "' . $this -> username . '", "' . $this ->pass . '", "' . $this -> email . '", "'.$create_at.'", "", "' . $this ->first_name . '", "' . $this ->last_name . '", "")';
+            $queryResult2 = $this->runQuery($result2);
+            var_dump($this -> result2);
 
             if ($queryResult2 == 'TRUE') {
                 echo "You have successfully logged in! Now you can log in to the site. <a href='index.php'>Main page</a>";

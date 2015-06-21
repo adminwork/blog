@@ -2,9 +2,9 @@
 
 session_start();
 
-include ("bd.php");
+include ("class/dbconnect.php");
 
-class Loggin extends ConnectDB
+class Loggin extends DbConnect
 {
     private $username;
     private $pass;
@@ -24,20 +24,14 @@ class Loggin extends ConnectDB
         $this -> username = htmlspecialchars($this -> username);
         $this -> pass = stripslashes($this -> pass);
         $this -> pass = htmlspecialchars($this -> pass);
-
         $this -> username = trim($this -> username);
         $this -> pass = trim($this -> pass);
     }
 
     public function UserLoggin(){
 
-
-
-
-
         $result = "SELECT * FROM users WHERE username='{$this -> username}'";
-        $queryResult = $this -> conn->query($result);
-
+        $queryResult = $this->runQuery($result);
         $myrow = mysqli_fetch_array($queryResult);
 
         if (empty($myrow['pass']))

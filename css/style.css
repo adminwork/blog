@@ -1,12 +1,3 @@
-/*
-Tutorial Name: How to Create a Registration and Login System Using PHP and mySQL
-Author: Samuel Dalusung
-*/
-
-
-
-/*= GENERAL STYLES
---------------------------------------------------------*/
 body {
     background: #efefef;
     font-family: 'Open Sans', sans-serif;
@@ -45,10 +36,9 @@ span {
     font-size: 13px;
     margin-top: 26px;
     color: #777;
+    padding-right: 150px;
 }
 
-/*= CONTAINERS
---------------------------------------------------------*/
 .container {
     padding: 25px 16px 25px 10px;
     font-weight: 400;
@@ -90,7 +80,7 @@ span {
     padding-bottom: 15px;
 }
 
-.container form .input,.container input[type=text],.container input[type=password],.container input[type=e] {
+.container form .input,.container input[type=text],.container input[type=password],.container input[type=email] {
     background: #fbfbfb;
     font-size: 24px;
     line-height: 1;

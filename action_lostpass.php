@@ -2,9 +2,9 @@
 
 session_start();
 
-include ("bd.php");
+include ("class/dbconnect.php");
 
-class LostPass extends ConnectDB
+class LostPass extends DbConnect
 {
 
     public $username;
@@ -25,7 +25,7 @@ class LostPass extends ConnectDB
     public function CreatePass()
     {
         $result = "SELECT id FROM users WHERE username ='{$this -> username}' LIMIT 1";
-        $queryResult = $this -> conn->query($result);
+        $queryResult = $this->runQuery($result);
 
         if (mysqli_num_rows($queryResult)==1)
         {
@@ -43,13 +43,13 @@ class LostPass extends ConnectDB
             $this -> update_at = date("m-d-y H:i:s");
             $this -> pass = md5(md5($string));
 
-            $this -> query = "UPDATE users SET pass ='{$this ->pass}' ,update_at ='{$this -> update_at }'  WHERE username ='{$this -> username}' ";
-            $queryResult = $this -> conn->query($this -> query);
+            $query = "UPDATE users SET pass ='{$this ->pass}' ,update_at ='{$this -> update_at }'  WHERE username ='{$this -> username}' ";
+            $queryResult = $this->runQuery($query);
 
 
 
             $result = "SELECT email FROM users WHERE username ='{$this -> username}' LIMIT 1";
-            $queryResult = $this ->conn->query($result);
+            $queryResult = $this->runQuery($result);
 
             $row = mysqli_fetch_assoc($queryResult);
             $this -> email = $row['email'];

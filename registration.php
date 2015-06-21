@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>FORMA</title>
-    <link rel="stylesheet" href="css/styleregistr.css">
-</head>
+<?php
+require_once 'class/dbconnect.php';
+require_once 'class/post.php';
+require_once 'class/category.php';
+require_once 'lib/function.php';
+require 'footer.php';
+
+?>
+<HTML>
+<?php require_once  'head.php';?>
+
 <body>
+<div class="container">
+    <div style="float: right" ><a href="login.php" class="btn btn-success">Log in</a></div>
+    <div style="float: right" ><a href="registracia.php" class="btn btn-success">Registrahion</a></div>
+    <div class="header"><a href="index.php" ><img src = images/football_1.jpg alt = "Blog of football"></a></div>
     <div>
-        <form action="action_reg.php" method="post" id="form">
-            <div>
+        <form action="action_reg.php" method="post" id="form" style="padding-left: 150px; padding-bottom: 60px" >
                 <ul>
                     <li>Please fill in the required fields.</li>
                     <li>
@@ -46,9 +53,15 @@
                         <input type="email" name="email" id="email" required>
                         <span></span>
                     </li>
-                    <li><input type="submit" value="Submit" name="login"></li>
+                    <li> <li><input type="submit" name="login" class="button" value="Submit" /></li></li>
                 </ul>
         </form>
     </div>
+    <div>
+        <?php
+        getFooter();
+        ?>
+    </div>
+</div>
 </body>
-</html>
+</HTML>
