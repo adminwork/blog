@@ -40,7 +40,7 @@ class LostPass extends DbConnect
 
             }
 
-            $this -> update_at = date("m-d-y H:i:s");
+            $this -> update_at = date("y-m-d H:i:s");
             $this -> pass = md5(md5($string));
 
             $query = "UPDATE users SET pass ='{$this ->pass}' ,update_at ='{$this -> update_at }'  WHERE username ='{$this -> username}' ";
